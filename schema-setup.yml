@@ -10,4 +10,4 @@
     state: installed
 
 - name: load schema
-  ansible.builtin.shell: mongo --host mangodb-dev.sivadevops22.online </app/schema/{{component}}.js
+  ansible.builtin.shell: mongodb --host mangodb-dev.sivadevops22.online </app/schema/{{component}}.js
