@@ -1,0 +1,13 @@
+
+- name: copy the repo files
+  ansible.builtin.copy:
+    src: mango.repo
+    dest: /etc/yum.repos.d/mongo.repo
+
+- name: install mangoDB client
+  ansible.builtin.yum:
+    name: mongodb-org-shell
+    state: installed
+
+- name: load schema
+  ansible.builtin.shell: mongo --host mangodb-dev.sivadevops22.online </app/schema/{{component}}.js

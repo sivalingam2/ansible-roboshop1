@@ -1,0 +1,11 @@
+- name: catalogue service
+  hosts: all
+  become: true
+  vars:
+    component: catalogue
+  tasks:
+    - name: import the  file
+      ansible.builtin.import_playbook: greet.yml
+
+
+
