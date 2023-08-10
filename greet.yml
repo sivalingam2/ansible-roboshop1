@@ -8,7 +8,7 @@
     state: installed
 
 - name: import the  file
-  ansible.builtin.import_playbook: app-preq.yml
+  ansible.builtin.import_tasks: app-preq.yml
 
 - name: download dependencies
   ansible.builtin.shell: npm install
@@ -16,10 +16,10 @@
   chdir: /app
 
 - name: import the  file
-  ansible.builtin.import_playbook: schema-setup.yml
+  ansible.builtin.import_tasks: schema-setup.yml
 
 - name: import the  file
-  ansible.builtin.import_playbook: systemd-setup.yml
+  ansible.builtin.import_tasks: systemd-setup.yml
 
 
 
