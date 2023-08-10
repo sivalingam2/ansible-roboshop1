@@ -5,7 +5,7 @@
     component: catalogue
   tasks:
     - name: nodeJS setup
-      ansible.builtin.import_playbook: greet.yml
+      ansible.builtin.import_tasks: greet.yml
 
 
 
