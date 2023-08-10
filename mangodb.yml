@@ -9,7 +9,7 @@
 
     - name: install mangoDB
       ansible.builtin.yum:
-        name: mangodb-org
+        name: mongodb-org
         state: installed
 
     - name: update listen address
