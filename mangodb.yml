@@ -18,9 +18,9 @@
         regexp: '127.0.0.1'
         replace: '0.0.0.0'
 
-    - name: start mangodb
+    - name: start mangoDB service
       ansible.builtin.systemd:
-        name: mangodb
+        name: mangod
         state: restarted
         enabled: yes
 
