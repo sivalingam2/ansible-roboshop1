@@ -15,12 +15,10 @@
 - name: download and extract appilication
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/{{component}}.zip
-    dest: /usr/share/nginx/html
+    dest: /app
     remote_src: yes
 
 
-#echo  -e "\e[32m>>>>> ${component} service <<<<<\e[0m"
-#cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
-#exit_status
+
 
 
