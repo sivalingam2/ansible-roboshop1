@@ -1,0 +1,26 @@
+- name: roboshop-mangodb set up
+  hosts: all
+  become: yes
+  tasks:
+    - name: copy the repo files
+      ansible.builtin.copy:
+        src: mango.repo
+        dest: /etc/yum.repos.d/mongo.repo
+
+    - name: mangodb org shell
+      ansible.builtin.yum:
+        name: install mangodb
+        state: installed
+
+    - name: update listen address
+      ansible.builtin.replace:
+        path: /etc/mongod.conf
+        regexp: '127.0.0.1'
+        replace: '0.0.0.0'
+
+    - name: start mangodb
+      ansible.builtin.systemd:
+        name: mangodb
+        state: restarted
+        enabled: yes
+
