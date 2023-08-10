@@ -7,9 +7,9 @@
         src: mango.repo
         dest: /etc/yum.repos.d/mongo.repo
 
-    - name: mangodb org shell
+    - name: install mangodb
       ansible.builtin.yum:
-        name: install mangodb
+        name: mangodb-org
         state: installed
 
     - name: update listen address
