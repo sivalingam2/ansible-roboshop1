@@ -4,7 +4,7 @@
   vars:
     component: catalogue
   tasks:
-    - name: import the  file
+    - name: nodeJS setup
       ansible.builtin.import_playbook: greet.yml
 
 
