@@ -1,9 +1,8 @@
-- name: catalogue service
+- name: cart service
   hosts: all
   become: true
   vars:
-    component: catalogue
-    schema: true
+    component: cart
   tasks:
     - name: nodeJS setup
       ansible.builtin.import_tasks: greet.yml

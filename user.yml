@@ -3,6 +3,7 @@
   become: true
   vars:
     component: user
+    schema: true
   tasks:
     - name: nodeJS setup
       ansible.builtin.import_tasks: greet.yml
