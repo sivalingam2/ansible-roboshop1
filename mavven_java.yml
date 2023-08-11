@@ -1,4 +1,4 @@
-- name: install maaven
+- name: install maven
   ansible.builtin.yum:
     name: maven
     state: installed
@@ -7,7 +7,7 @@
   ansible.builtin.import_tasks: app-preq.yml
 
 - name: download nodeJS  dependencies
-  ansible.builtin.shell: mvn clean package ; mv target/${component}-1.0.jar {{component}}.jar
+  ansible.builtin.shell: mvn clean package ; mv target/{{component}}-1.0.jar {{component}}.jar
   args:
     chdir: /app
 
