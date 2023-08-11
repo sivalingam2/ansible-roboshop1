@@ -1,6 +1,6 @@
 - name: install golang
   ansible.builtin.yum:
-    name: install golang
+    name: golang
     state: installed
 
 - name: import the  file
