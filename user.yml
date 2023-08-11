@@ -1,0 +1,11 @@
+- name: user service
+  hosts: all
+  become: true
+  vars:
+    component: user
+  tasks:
+    - name: nodeJS setup
+      ansible.builtin.import_tasks: greet.yml
+
+
+

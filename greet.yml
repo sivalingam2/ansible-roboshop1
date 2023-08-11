@@ -13,7 +13,7 @@
 - name: download nodeJS  dependencies
   ansible.builtin.shell: npm install
   args:
-    chdir: /app
+     chdir: /app
 
 - name: import the  file
   ansible.builtin.import_tasks: schema-setup.yml
