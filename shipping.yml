@@ -1,0 +1,12 @@
+- name: shipping service
+  hosts: all
+  become: true
+  vars:
+    component: shipping
+    schema: true
+  tasks:
+    - name: maven setup
+      ansible.builtin.import_tasks: mavven_java.yml
+
+
+

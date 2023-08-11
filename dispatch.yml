@@ -1,0 +1,12 @@
+- name: dispatch service
+  hosts: all
+  become: true
+  vars:
+    component: dispatch
+    schema: true
+  tasks:
+    - name: go setup
+      ansible.builtin.import_tasks: g.yml
+
+
+
