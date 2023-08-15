@@ -1,6 +1,6 @@
 - name: copy the repo files
   ansible.builtin.copy:
-    src: mango.repo
+    src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
 
 - name: install mangoDB

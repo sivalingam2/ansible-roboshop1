@@ -5,7 +5,7 @@
 
 - name: Copy the file
   ansible.builtin.copy:
-    src: fronted.confi
+    src: frontend.confi
     dest: /etc/nginx/default.d/roboshop.conf
 
 - name:  remove directory
